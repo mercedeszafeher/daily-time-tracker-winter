@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import getFirebase from "./firebase";
 
+
 import backgroundImage from "./background.png";
 import SignUpForm from "./SignUpForm";
 

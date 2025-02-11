@@ -1,14 +1,18 @@
 import firebase from "firebase";
 
 // If you're not using Code Sandbox, never hard-code the keys! Add them in your .env file and link them here
-var firebaseConfig = {
-  apiKey: "AIzaSyBp8pFyz0OptMf1I1b43ppOqU-hgFc64XI",
-  authDomain: "myfirebaseproject-46ea2.firebaseapp.com",
-  projectId: "myfirebaseproject-46ea2",
-  storageBucket: "myfirebaseproject-46ea2.appspot.com",
-  messagingSenderId: "52876465545",
-  appId: "1:52876465545:web:bf609d659dc3d5c91c3d58"
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Initialize Firebase
 let instance;
